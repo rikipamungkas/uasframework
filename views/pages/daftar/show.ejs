@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Detail Kipas</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <%- include ('../component/navbar') %>
+        <p></p>
+        <a href="/daftar">Kembali</a>
+        <h1>Detail Kipas</h1>
+        <ul>
+            <div class="col-md-4">
+                <img class="img-fluid"
+                    src="data:image/<%=daftar.img.contentType%>;base64,<%=daftar.img.data.toString('base64')%>"
+                    alt="image-produk">
+            </div>
+            <li>Nama Produk: <strong><%= daftar.namaProduk %></strong></li>
+            <li>Jenis: <strong><%= daftar.jenis %></strong></li>
+        </ul>
+        <a href="/daftar/<%= daftar._id %>/edit">Edit</a>
+        <a href="/daftar/<%= daftar._id %>/hapus">Hapus</a>
+        <footer>
+            <p>Mahasiswa Stikom PGRI SP5.2</p>
+        </footer>
+    </body>
+</html>

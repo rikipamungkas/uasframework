@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <title>Tambah Data</title>
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+
+<body>
+    <h1>Tambah Kipas</h1>
+    <form action="/daftar" method="POST" enctype="multipart/form-data">
+        <div class="input-group">
+            <label>Nama Kipas</label>
+            <input type="text" name="namaProduk">
+        </div>
+        <div class="input-group">
+            <label>Jenis Produk</label>
+            <input type="text" name="jenis">
+        </div>
+        <div class="input-group">
+            <label>Gambar</label>
+            <input type="file" name="image">
+        </div>
+        <button type="submit">Tambah</button>
+        <a href="/daftar">Kembali</a>
+    </form>
+    <footer>
+        <p>Mahasiswa STIKOM BANYUWANGI SP5.2</p>
+    </footer>
+</body>
+
+</html>

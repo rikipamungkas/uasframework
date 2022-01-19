@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Kipas</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <%- include ('../component/navbar') %>
+        <p></p>
+        <a href="/daftar/create">Tambah Kipas</a>
+        <h1>Daftar Kipas (<%= daftar.length %>)</h1>
+        <form action="/daftar">
+            <input type="text" name="keyword">
+            <button type="submit">Cari</button>
+        </form>
+        <ul>
+            <% if (daftar.length>0) { %> 
+            <% daftar.forEach (function(daftar){ %>
+            <li><a href="/daftar/<%= daftar._id %>"><%= daftar.namaProduk %></a></li>
+            <% }); %>
+            <% } else { %>
+            <p>Data Kipas Kosong</p>
+            <% } %>
+        </ul>
+        <footer>
+            <p>Mahasiswa Stikom PGRI SP5.2</p>
+        </footer>
+    </body>
+</html>

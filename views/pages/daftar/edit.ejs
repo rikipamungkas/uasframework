@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <title>Edit Data</title>
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+
+<body>
+    <h1>Edit Data</h1>
+    <form action="/daftar/update/<%= daftar._id %>" method="POST">
+        <div class="input-group">
+            <label>Nama Kipas</label>
+            <input type="text" name="namaProduk" value="<%= daftar.namaProduk %>">
+            <input type="hidden" name="_id" value="<%= daftar._id %>">
+        </div>
+        <div class="input-group">
+            <label>Jenis Produk</label>
+            <input type="text" name="jenis" value="<%= daftar.jenis %>">
+        </div>
+
+        <button type="submit">Update</button>
+        <a href="/daftar">Kembali</a>
+    </form>
+    <footer>
+        <p>Mahasiswa STIKOM BANYUWANGI SP5.2</p>
+    </footer>
+</body>
+
+</html>
